@@ -1,7 +1,7 @@
 import React from "react";
 import { UserProps } from "@/interfaces";
 
-const UserCard: React.FC<{ user: UserProps }> = ({ user }) => {
+const UserCard: React.FC<UserProps> = (user) => {
   return (
     <div className="border rounded-lg p-6 shadow hover:shadow-xl transition duration-200">
       <h2 className="text-2xl font-semibold text-blue-700 mb-2">{user.name}</h2>
@@ -21,9 +21,7 @@ const UserCard: React.FC<{ user: UserProps }> = ({ user }) => {
       <div className="mt-4">
         <h3 className="font-bold text-lg">🏢 Company</h3>
         <p className="text-gray-700">{user.company.name}</p>
-        <p className="text-sm text-gray-500">
-          &quot;{user.company.catchPhrase}&quot;
-        </p>
+        <p className="text-sm text-gray-500">"{user.company.catchPhrase}"</p>
       </div>
     </div>
   );
